@@ -7,7 +7,7 @@
     <p class="text-2xl"><%= event.date.to_date.strftime('%b') %></p>
   </div>
 
-  <div class="">
+  <div>
     <p><strong><%= event.title %></strong></p>
     <p>
       <%= event.from.to_time.strftime('%H:%M') %>
@@ -15,6 +15,9 @@
       <%= event.to.to_time.strftime('%H:%M') %>
     </p>
 
-    <p class=""><%= event.content.to_plain_text[0,55] + '...' %></p>
+    <p>
+      <%= event.content.to_plain_text[0,55] %>
+      <%= '...' if event.content.to_plain_text.length > 55 %>
+    </p>
   </div>
 </div>
