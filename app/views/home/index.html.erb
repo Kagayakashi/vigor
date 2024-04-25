@@ -1,5 +1,5 @@
 <article>
-  <section>
+  <section id="welcome">
     <h1><%= t("home.hello") %></h1>
     <p><%= raw t("home.vigor_def") %></p>
 
@@ -19,8 +19,8 @@
     </ul>
   </section>
 
-  <section>
+  <section id="events">
     <h1><%= t("home.news") %></h1>
-    <p><%= raw t("home.vigor_def") %></p>
+    <%= render partial: "event", collection: @events %>
   </section>
 </article>
