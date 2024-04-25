@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      listStyleImage: {
+        'essence': "url('li.gif')",
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
