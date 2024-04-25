@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'actiontext.css';
+
+@layer base {
+  header {
+    @apply py-2;
+  }
+
+  main {
+    @apply py-2;
+  }
+
+  footer {
+    @apply py-2;
+  }
+
+  article {
+    @apply p-2;
+  }
+
+  section {
+    @apply p-2;
+  }
+
+  aside {
+    @apply p-2;
+  }
+
+  h1 {
+    @apply text-2xl;
+  }
+
+  ul {
+    @apply list-image-essence px-8;
+  }
+}

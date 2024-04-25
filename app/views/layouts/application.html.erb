@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>" class="text-gray-900 bg-gray-100 font-serif">
+  <head>
+    <title>Vigor</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <div class="container flex flex-col mx-auto">
+      <header>
+        <div class="flex gap-4">
+          <div class="flex-none w-[222px]">
+            <%= image_tag('logo.gif', alt: 'Logo image') %>
+          </div>
+          <div class="">
+            <%= image_tag('header.gif', alt: 'Header image') %>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="flex">
+          <aside class="flex-none bg-[#EFF1B6] w-[222px] p-2">
+            <ul>
+              <li>
+                <%= t("menu.home") %>
+                <ul>
+                  <li><%= t("menu.calendar") %></li>
+                  <li><%= t("menu.contacts") %></li>
+                </ul>
+              </li>
+              <li>
+                <%= t("menu.about") %>
+                <ul>
+                  <li><%= t("menu.history") %></li>
+                  <li><%= t("menu.coordinators") %></li>
+                </ul>
+              </li>
+              <li>
+                <%= t("menu.programs") %>
+                <ul>
+                  <li><%= t("menu.club") %></li>
+                  <li><%= t("menu.kaleidoscope") %></li>
+                </ul>
+              </li>
+            </ul>
+          </aside>
+
+          <article>
+            <%= yield %>
+          </article>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
