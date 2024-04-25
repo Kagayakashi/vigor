@@ -21,6 +21,8 @@
 
   <section id="events">
     <h1><%= t("home.news") %></h1>
-    <%= render partial: "event", collection: @events %>
+    <div class="flex flex-col gap-2 w-96">
+      <%= render partial: "event", collection: @events %>
+    </div>
   </section>
 </article>

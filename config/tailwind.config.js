@@ -13,7 +13,7 @@ module.exports = {
         'essence': "url('li.gif')",
       },
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter var', ...defaultTheme.fontFamily.serif],
       },
     },
   },
