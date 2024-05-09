@@ -19,10 +19,7 @@
     </ul>
   </section>
 
-  <section id="events">
-    <h1><%= t("home.news") %></h1>
-    <div class="flex flex-col gap-2 w-96">
-      <%= render partial: "event", collection: @events %>
-    </div>
+  <section id="events" class="flex flex-col gap-4 w-fit border border-gray-200 rounded-lg shadow sm:p-1 md:p-2">
+    <%= render template: "events/index" %>
   </section>
 </article>
