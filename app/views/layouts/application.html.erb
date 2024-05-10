@@ -14,14 +14,20 @@
   <body>
     <div class="container flex flex-col mx-auto">
       <header>
-        <div class="flex gap-4">
-          <div class="flex-none w-[222px]">
-            <%= link_to root_path do %>
-              <%= image_tag('logo.gif', alt: 'Logo image') %>
+        <div class="flex gap-4 items-center justify-start">
+          <%= link_to root_path, class: "flex-none w-[222px]" do %>
+            <%= image_tag("logo.gif", alt: "Logo image") %>
+          <% end %>
+
+          <%= image_tag("header.gif", alt: "Header image") %>
+
+          <div class="flex gap-2">
+            <% I18n.available_locales.each do |locale| %>
+              <% url_params = request.query_parameters.merge(locale: locale) %>
+              <%= link_to url_for(url_params), title: t("language.#{locale}"), class: "hover:scale-110" do %>
+                <%= image_tag("#{locale}.png", alt: "#{locale} language") %>
+              <% end %>
             <% end %>
-          </div>
-          <div class="">
-            <%= image_tag('header.gif', alt: 'Header image') %>
           </div>
         </div>
       </header>
