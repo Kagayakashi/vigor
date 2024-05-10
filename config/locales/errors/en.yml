@@ -27,26 +27,12 @@
 #       "yes": yup
 #       enabled: "ON"
 
-lv:
-  events:
-    new: "Izveidot"
-    edit: "Rediģēt"
-    delete: "Dzēst"
-    events: "Pasākumi"
+en:
   activerecord:
-    models:
-      event:
-        one: "Pasākums"
-        other: "Pasākumi"
-    attributes:
-      event:
-        title_ru: "Virsraksts krieviski"
-        title_lv: "Virsraksts latviski"
-        title_en: "Virsraksts angliski"
-        content_ru: "Saturs krieviski"
-        content_lv: "Saturs latviski"
-        content_en: "Saturs angliski"
-        date: "Datums"
-        from: "Laiks no"
-        to: "Laiks līdz"
-
+    errors:
+      template:
+        header:
+          one:   "1 error prohibited this %{model} from being saved"
+          other: "%{count} errors prohibited this %{model} from being saved"
+      messages:
+        blank: "cannot be blank"

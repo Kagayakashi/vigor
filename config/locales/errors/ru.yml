@@ -26,27 +26,28 @@
 #     en:
 #       "yes": yup
 #       enabled: "ON"
+#       welcome: <b>welcome!</b>
+#       hello_to: <b>welcome %{name}!</b>
+#
+#   raw t('welcome')
+#   t('hello_to', name: 'Vasya')
+#
+#
+#
+#
+#
+#
 
-lv:
-  events:
-    new: "Izveidot"
-    edit: "Rediģēt"
-    delete: "Dzēst"
-    events: "Pasākumi"
+
+
+ru:
   activerecord:
-    models:
-      event:
-        one: "Pasākums"
-        other: "Pasākumi"
-    attributes:
-      event:
-        title_ru: "Virsraksts krieviski"
-        title_lv: "Virsraksts latviski"
-        title_en: "Virsraksts angliski"
-        content_ru: "Saturs krieviski"
-        content_lv: "Saturs latviski"
-        content_en: "Saturs angliski"
-        date: "Datums"
-        from: "Laiks no"
-        to: "Laiks līdz"
-
+    errors:
+      template:
+        header:
+          one:  "1 ошибка не позволила сохранить %{model}"
+          few:  "%{count} ошибки не позволили сохранить %{model}"
+          many: "%{count} ошибок не позволили сохранить %{model}"
+          other: "%{count} ошибки не позволили сохранить %{model}"
+      messages:
+        blank: "не может быть пустым"
