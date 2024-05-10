@@ -33,3 +33,19 @@ lv:
     edit: "Rediģēt"
     delete: "Dzēst"
     events: "Pasākumi"
+  activerecord:
+    models:
+      event:
+        one: "Pasākums"
+        other: "Pasākumi"
+    attributes:
+      event:
+        title_ru: "Virsraksts krieviski"
+        title_lv: "Virsraksts latviski"
+        title_en: "Virsraksts angliski"
+        content_ru: "Saturs krieviski"
+        content_lv: "Saturs latviski"
+        content_en: "Saturs angliski"
+        date: "Datums"
+        from: "Laiks no"
+        to: "Laiks līdz"

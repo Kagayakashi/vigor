@@ -29,17 +29,6 @@
 
 en:
   activerecord:
-    attributes:
-      event:
-        title_ru: "Title in Russian"
-        title_lv: "Title in Latvian"
-        title_en: "Title in English"
-        content_ru: "Content in Russian"
-        content_lv: "Content in Latvian"
-        content_en: "Content in English"
-        date: "Date"
-        from: "Time from"
-        to: "Time to"
     errors:
       template:
         header:
@@ -47,5 +36,3 @@ en:
           other: "%{count} errors prohibited this %{model} from being saved"
       messages:
         blank: "cannot be blank"
-
-              

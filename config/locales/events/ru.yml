@@ -44,3 +44,22 @@
 ru:
   events:
     new: "Создать"
+    edit: "Изменить"
+    delete: "Удалить"
+    events: "Мероприятия"
+  activerecord:
+    models:
+      event:
+        one: "Мероприятие"
+        other: "Мероприятия"
+    attributes:
+      event:
+        title_ru: "Заголовок на русском"
+        title_lv: "Заголовок на латышском"
+        title_en: "Заголовок на английском"
+        content_ru: "Контент на русском"
+        content_lv: "Контент на латышском"
+        content_en: "Контент на английском"
+        date: "Дата"
+        from: "Время с"
+        to: "Время по"
