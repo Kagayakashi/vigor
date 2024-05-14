@@ -42,11 +42,16 @@
 
 
 ru:
+  helpers:
+    submit:
+      update: "Изменить %{model}"
   events:
     new: "Создать"
     edit: "Изменить"
     delete: "Удалить"
     events: "Мероприятия"
+    show: "Посмотреть"
+    editing: "Редактирование мероприятия"
   activerecord:
     models:
       event:

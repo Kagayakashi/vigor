@@ -28,11 +28,16 @@
 #       enabled: "ON"
 
 lv:
+  helpers:
+    submit:
+      update: "Atjaunināt %{model}"
   events:
     new: "Izveidot"
     edit: "Rediģēt"
     delete: "Dzēst"
     events: "Pasākumi"
+    show: "Apskatīt"
+    editing: "Pasākumu Rediģēšana"
   activerecord:
     models:
       event:
