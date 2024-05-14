@@ -67,9 +67,11 @@ class EventsController < ApplicationController
     def event_params
       params.require(:event).permit(
         :title_en,
-        :title_ru,
         :content_en,
+        :title_ru,
         :content_ru,
+        :title_lv,
+        :content_lv,
         :date,
         :from,
         :to

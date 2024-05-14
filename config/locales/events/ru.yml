@@ -44,7 +44,9 @@
 ru:
   helpers:
     submit:
-      update: "Изменить %{model}"
+      event:
+        create: "Создать мероприятие"
+        update: "Изменить мероприятие"
   events:
     new: "Создать"
     edit: "Изменить"
@@ -52,6 +54,7 @@ ru:
     events: "Мероприятия"
     show: "Посмотреть"
     editing: "Редактирование мероприятия"
+    creating: "Новое мероприятие"
   activerecord:
     models:
       event:

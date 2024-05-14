@@ -11,25 +11,48 @@
     </div>
   <% end %>
 
-   <div class="my-5">
-    <%= form.label :title_ru %>
-    <%= form.text_field :title_ru, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+  <div data-controller="form-language-tabs">
+    <div class="form-language-tabs">
+      <button type="button" data-action="form-language-tabs#switchTab" data-form-language-tabs-target="tab" data-language="ru" class="form-language-tab active"><%= t("language.ru") %></button>
+      <button type="button" data-action="form-language-tabs#switchTab" data-form-language-tabs-target="tab" data-language="lv" class="form-language-tab"><%= t("language.lv") %></button>
+      <button type="button" data-action="form-language-tabs#switchTab" data-form-language-tabs-target="tab" data-language="en" class="form-language-tab"><%= t("language.en") %></button>
+    </div>
+  
+    <div data-form-language-tabs-target="content" data-language="ru" class="language-content">
+      <div class="my-5">
+        <%= form.label :title_ru %>
+        <%= form.text_field :title_ru, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
 
-  <div class="my-5">
-    <%= form.label :content_ru %>
-    <%= form.rich_text_area  :content_ru, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+      <div class="my-5">
+        <%= form.label :content_ru %>
+        <%= form.rich_text_area  :content_ru, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
+    </div>
 
-  <div class="my-5">
-    <%= form.label :title_en %>
-    <%= form.text_field :title_en, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+    <div data-form-language-tabs-target="content" data-language="lv" class="language-content hidden">
+      <div class="my-5">
+        <%= form.label :title_lv %>
+        <%= form.text_field :title_lv, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
 
-  <div class="my-5">
-    <%= form.label :content_en %>
-    <%= form.rich_text_area  :content_en, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+      <div class="my-5">
+        <%= form.label :content_lv %>
+        <%= form.rich_text_area  :content_lv, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
+    </div>
+
+    <div data-form-language-tabs-target="content" data-language="en" class="language-content hidden">
+      <div class="my-5">
+        <%= form.label :title_en %>
+        <%= form.text_field :title_en, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
+
+      <div class="my-5">
+        <%= form.label :content_en %>
+        <%= form.rich_text_area  :content_en, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
+    </div>
 
   <div class="my-5">
     <%= form.label :date %>

@@ -30,7 +30,9 @@
 lv:
   helpers:
     submit:
-      update: "Atjaunināt %{model}"
+      event:
+        create: "Izveidot pasākumu"
+        update: "Atjaunināt pasākumu"
   events:
     new: "Izveidot"
     edit: "Rediģēt"
@@ -38,6 +40,7 @@ lv:
     events: "Pasākumi"
     show: "Apskatīt"
     editing: "Pasākumu Rediģēšana"
+    creating: "Jauns pasākums"
   activerecord:
     models:
       event:

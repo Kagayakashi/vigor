@@ -28,6 +28,11 @@
 #       enabled: "ON"
 
 en:
+  helpers:
+    submit:
+      event:
+        create: "Create event"
+        update: "Update event"
   events:
     new: "New"
     edit: "Edit"
@@ -35,6 +40,7 @@ en:
     events: "Events"
     show: "Show"
     editing: "Editing event"
+    creating: "New event"
   activerecord:
     attributes:
       event:
