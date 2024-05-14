@@ -19,7 +19,13 @@
     </ul>
   </section>
 
-  <section id="events" class="flex flex-col gap-4 w-fit border border-gray-300 bg-gray-200 rounded-lg shadow sm:p-1 md:p-2">
-    <%= render template: "events/index" %>
-  </section>
+  <div class="flex gap-4">
+    <section id="events" class="flex flex-col gap-4 w-fit border border-gray-300 bg-gray-100 rounded-lg shadow sm:p-1 md:p-2">
+      <%= render template: "events/index" %>
+    </section>
+
+    <section id="images" class="flex flex-col gap-4 w-fit border border-gray-300 bg-gray-100 rounded-lg shadow sm:p-1 md:p-2">
+      <%= render template: "images/index" %>
+    </section>
+  </div>
 </article>
