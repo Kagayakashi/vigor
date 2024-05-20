@@ -56,6 +56,18 @@
                   <li><%= t("menu.kaleidoscope") %></li>
                 </ul>
               </li>
+              <li>
+                <%= link_to t("menu.gallery"), image_categories_path %>
+                <% if image_categories = ImageCategory.all %>
+                  <ul>
+                    <% image_categories.all.each do |image_category| %>
+                    <li>
+                      <%= link_to image_category.name, image_category_path(image_category) %>
+                    </li>
+                    <% end %>
+                  </ul>
+                <% end %>
+              </li>
             </ul>
           </aside>
 

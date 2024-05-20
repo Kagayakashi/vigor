@@ -1,20 +1,6 @@
-<div id="<%= dom_id image %>">
-  <%= image_tag image.image, class: "object-scale-down h-48 w-96 p-2" if image.image.attached? %>
-
-  <% @image_category = image.image_category if @image_category.nil? %>
-
-  <% if action_name == "show" && @image_category.images.count > 1 %>
-    <% prev_image = @image_category.images.where("id < ?", image.id).last %>
-    <% next_image = @image_category.images.where("id > ?", image.id).first %>
-
-    <div class="image-navigation">
-      <% if prev_image %>
-        <%= link_to "Previous", image_category_image_path(@image_category, prev_image) %>
-      <% end %>
-
-      <% if next_image %>
-        <%= link_to "Next", image_category_image_path(@image_category, next_image) %>
-      <% end %>
-    </div>
+<div id="<%= dom_id image %>" class="flex items-start justify-center">
+  <%= link_to image_category_image_path(image.image_category, image),
+    class: "border-2 rounded border-transparent hover:border-slate-500 flex p-1 w-fit" do %>
+    <%= image_tag image.image, alt: image.image.name, class: image_class if image.image.attached? %>
   <% end %>
 </div>

@@ -65,6 +65,10 @@ class ImageCategoriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def image_category_params
-      params.require(:image_category).permit(:name)
+      params.require(:image_category).permit(
+        :name_en,
+        :name_ru,
+        :name_lv,
+      )
     end
 end

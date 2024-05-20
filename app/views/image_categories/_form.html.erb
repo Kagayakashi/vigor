@@ -1,7 +1,7 @@
 <%= form_with(model: image_category, class: "contents") do |form| %>
   <% if image_category.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(image_category.errors.count, "error") %> prohibited this image_category from being saved:</h2>
+      <h2><%= t('activerecord.errors.template.header', count: image_category.errors.count, model: image_category.model_name.human) %></h2>
 
       <ul>
         <% image_category.errors.each do |error| %>
@@ -11,12 +11,35 @@
     </div>
   <% end %>
 
-  <div class="my-5">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+  <div data-controller="form-language-tabs">
+    <div class="form-language-tabs">
+      <button type="button" data-action="form-language-tabs#switchTab" data-form-language-tabs-target="tab" data-language="ru" class="form-language-tab active"><%= t("language.ru") %></button>
+      <button type="button" data-action="form-language-tabs#switchTab" data-form-language-tabs-target="tab" data-language="lv" class="form-language-tab"><%= t("language.lv") %></button>
+      <button type="button" data-action="form-language-tabs#switchTab" data-form-language-tabs-target="tab" data-language="en" class="form-language-tab"><%= t("language.en") %></button>
+    </div>
+  
+    <div data-form-language-tabs-target="content" data-language="ru" class="language-content">
+      <div class="my-5">
+        <%= form.label :name_ru %>
+        <%= form.text_field :name_ru, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
+    </div>
+
+    <div data-form-language-tabs-target="content" data-language="lv" class="language-content hidden">
+      <div class="my-5">
+        <%= form.label :name_lv %>
+        <%= form.text_field :name_lv, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
+    </div>
+
+    <div data-form-language-tabs-target="content" data-language="en" class="language-content hidden">
+      <div class="my-5">
+        <%= form.label :name_en %>
+        <%= form.text_field :name_en, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
+    </div>
 
   <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    <%= form.submit class: "w-fit text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg px-3 py-2" %>
   </div>
 <% end %>

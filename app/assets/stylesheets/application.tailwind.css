@@ -34,6 +34,14 @@
   }
 
   ul {
-    @apply list-image-essence px-8;
+    @apply list-image-essence pl-8;
+  }
+
+  a {
+    font-weight: bold
+  }
+  
+  li a:hover {
+    text-decoration: underline;
   }
 }

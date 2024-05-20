@@ -1,15 +1,25 @@
-<div class="mx-auto md:w-2/3 w-full flex">
-  <div class="mx-auto">
-    <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-    <% end %>
-
-    <%= render @image_category %>
-
-    <%= link_to "Edit this image_category", edit_image_category_path(@image_category), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <div class="inline-block ml-2">
-      <%= button_to "Destroy this image_category", image_category_path(@image_category), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
-    </div>
-    <%= link_to "Back to image_categories", image_categories_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+<section class="flex flex-col gap-2">
+  <div class="flex justify-between items-center">
+    <h1 class="font-bold text-2xl"><%= @image_category.name %></h1>
+    <%= link_to t("image.new"), new_image_category_image_path(@image_category),
+      class: "text-white bg-green-700 hover:bg-green-800 font-medium rounded-lg px-3 py-2" %>
   </div>
-</div>
+
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+    <%= render partial: "images/image",
+      collection: @image_category.images,
+      locals: { image_class: "max-h-96" } %>
+  </section>
+
+  <div class="flex flex-col gap-1 py-2">
+    <div class="flex gap-2 py-2">
+      <%= link_to t("gallery.edit"), edit_image_category_path(@image_category),
+        class: "text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg px-3 py-2" %>
+
+      <%= button_to t("gallery.delete"), image_category_path(@image_category), method: :delete,
+        class: "text-white bg-red-700 hover:bg-red-800 font-medium rounded-lg px-3 py-2" %>
+    </div>
+
+    <%= link_to t("gallery.gallery"), image_categories_path, class: "inline-block w-fit border border-gray-200 text-gray-900 bg-white hover:bg-gray-100 hover:text-blue-700 font-medium rounded-lg px-3 py-2" %>
+  </div>
+</section>
