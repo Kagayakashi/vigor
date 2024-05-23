@@ -51,6 +51,8 @@ en:
       delete: "Delete image"
       images: "Images"
       show: "Show"
+      prev: "Previous image"
+      next: "Next image"
       editing: "Editing image"
       creating: "New images"
   activerecord:

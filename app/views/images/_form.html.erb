@@ -16,12 +16,12 @@
   </p>
 
   <div class="my-5">
-    <% if @image.present? %>
+    <% if @image.id %>
       <%= form.label :image %>
-      <%= form.file_field :image %>
+      <%= form.file_field :image, required: true %>
     <% else %>
       <%= form.label :images %>
-      <%= form.file_field :images, multiple: true %>
+      <%= form.file_field :images, multiple: true, required: true %>
     <% end %>
   </div>
 

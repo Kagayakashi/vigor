@@ -51,6 +51,8 @@ lv:
       delete: "Dzēst attēlu"
       images: "Attēli"
       show: "Apskatīt attēlu"
+      prev: "Iepriekšējais attēls"
+      next: "Nākamais attēls"
       editing: "Attēla rediģēšana"
       creating: "Jauni attēli"
   activerecord:

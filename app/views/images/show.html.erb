@@ -16,11 +16,11 @@
 
     <div class="image-navigation">
       <% if prev_image %>
-        <%= link_to "Previous", image_category_image_path(@image_category, prev_image) %>
+        <%= link_to t("gallery.image.prev"), image_category_image_path(@image_category, prev_image) %>
       <% end %>
-
+      
       <% if next_image %>
-        <%= link_to "Next", image_category_image_path(@image_category, next_image) %>
+        <%= link_to t("gallery.image.next"), image_category_image_path(@image_category, next_image) %>
       <% end %>
     </div>
   <% end %>
