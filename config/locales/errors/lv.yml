@@ -35,4 +35,5 @@ lv:
           one:   "%{model} nav saglabājams, jo ir pieļauta %{count} kļūda"
           other: "%{model} nav saglabājams, jo ir pieļautas %{count} kļūdas"
       messages:
+        invalid_image: "is nederīgs"
         blank: "nevar būt tukšs"

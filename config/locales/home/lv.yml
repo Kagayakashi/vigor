@@ -29,7 +29,6 @@
 
 lv:
   home:
-    events: "Pasākumi"
     vigor: "Vigor"
     vigor_def: "Vigor – tulkojumā no latīņu valodas nozīmē „dzīves spēks”, „dzīves enerģija”."
     hello: "Laipni lūdzam"

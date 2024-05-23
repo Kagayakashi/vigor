@@ -28,12 +28,41 @@
 #       enabled: "ON"
 
 en:
+  helpers:
+    submit:
+      image_category:
+        create: "Create category"
+        update: "Update category"
+      image:
+        create: "Add image"
+        update: "Update image"
+  gallery:
+    image_category:
+      new: "New category"
+      edit: "Edit category"
+      delete: "Delete category"
+      categories: "Categories"
+      show: "Show"
+      editing: "Editing category"
+      creating: "New category"
+    image:
+      new: "Add image"
+      edit: "Edit image"
+      delete: "Delete image"
+      images: "Images"
+      show: "Show"
+      editing: "Editing image"
+      creating: "New images"
   activerecord:
-    errors:
-      template:
-        header:
-          one:   "1 error prohibited this %{model} from being saved"
-          other: "%{count} errors prohibited this %{model} from being saved"
-      messages:
-        invalid_image: "is invalid"
-        blank: "cannot be blank"
+    models:
+      image_category:
+        one: "Category"
+        other: "Categories"
+      image:
+        one: "Image"
+        other: "Images"
+    attributes:
+      image_category:
+        name_ru: "Name in Russian"
+        name_lv: "Name in Latvian"
+        name_en: "Name in English"

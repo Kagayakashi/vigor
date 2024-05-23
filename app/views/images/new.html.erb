@@ -1,7 +1,6 @@
-<div class="mx-auto md:w-2/3 w-full">
-  <h1 class="font-bold text-4xl">New image</h1>
+<h1 class="font-bold text-4xl"><%= t("gallery.image.creating") %></h1>
 
-  <%= render "form", image: @image %>
+<%= render "form", image: @image %>
 
-  <%= link_to "Back to images", image_category_images_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-</div>
+<%= link_to t("gallery.image.images"), image_category_path(@image_category),
+  class: "inline-block w-fit border border-gray-200 text-gray-900 bg-white hover:bg-gray-100 hover:text-blue-700 font-medium rounded-lg px-3 py-2" %>

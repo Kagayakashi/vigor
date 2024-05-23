@@ -23,20 +23,22 @@ class ImagesController < ApplicationController
   # POST /images or /images.json
   def create
     errors = []
+    images = params[:image][:images].reject { |file| file.size == 0 }
 
-    images_params[:images].each do |image|
+    @image = @image_category.images.build
+
+    images.each.each do |image|
       @image = @image_category.images.build(image: image)
       resize_image if @image.image.attached?
-
       unless @image.save
         errors << @image.errors.full_messages
       end
     end
 
     respond_to do |format|
-      if errors.empty?
+      if errors.empty? && @image.valid?
         format.html { redirect_to image_category_path(@image_category), notice: "Images were successfully created." }
-        format.json { render :show, status: :created, location: @image }
+        format.json { render :show, status: :created, location: @image_category}
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: errors, status: :unprocessable_entity }
@@ -47,12 +49,14 @@ class ImagesController < ApplicationController
   # PATCH/PUT /images/1 or /images/1.json
   def update
     respond_to do |format|
-      if @image.update(image_params)
+      if @image.update(image: params[:image][:image])
+        resize_image if @image.image.attached?
+
         format.html { redirect_to image_category_image_url(@image_category, @image), notice: "Image was successfully updated." }
         format.json { render :show, status: :ok, location: @image }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @image.errors, status: :unprocessable_entity }
+        format.json { render json: errors, status: :unprocessable_entity }
       end
     end
   end
@@ -62,7 +66,7 @@ class ImagesController < ApplicationController
     @image.destroy!
 
     respond_to do |format|
-      format.html { redirect_to image_category_images_url, notice: "Image was successfully destroyed." }
+      format.html { redirect_to image_category_path(@image_category), notice: "Image was successfully destroyed." }
       format.json { head :no_content }
     end
   end

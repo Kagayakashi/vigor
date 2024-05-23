@@ -29,7 +29,6 @@
 
 en:
   home:
-    events: "Events"
     vigor: "Vigor"
     vigor_def: "<strong>Vigor</strong> in translation from Latin means “vital force”, “vital energy”."
     hello: "Welcome!"

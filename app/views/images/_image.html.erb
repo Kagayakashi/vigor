@@ -1,5 +1,6 @@
 <div id="<%= dom_id image %>" class="flex items-start justify-center">
   <%= link_to image_category_image_path(image.image_category, image),
+    title: t("gallery.image.show"),
     class: "border-2 rounded border-transparent hover:border-slate-500 flex p-1 w-fit" do %>
     <%= image_tag image.image, alt: image.image.name, class: image_class if image.image.attached? %>
   <% end %>

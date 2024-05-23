@@ -1,9 +1,17 @@
 <section class="flex flex-col gap-2">
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-2xl"><%= @image_category.name %></h1>
-    <%= link_to t("image.new"), new_image_category_image_path(@image_category),
+    <%= link_to t("gallery.image.new"), new_image_category_image_path(@image_category),
       class: "text-white bg-green-700 hover:bg-green-800 font-medium rounded-lg px-3 py-2" %>
   </div>
+
+  <section id="actions" class="flex gap-2 py-2">
+    <%= link_to t("gallery.image_category.edit"), edit_image_category_path(@image_category),
+      class: "text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg px-3 py-2" %>
+
+    <%= button_to t("gallery.image_category.delete"), image_category_path(@image_category), method: :delete,
+      class: "text-white bg-red-700 hover:bg-red-800 font-medium rounded-lg px-3 py-2" %>
+  </section>
 
   <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
     <%= render partial: "images/image",
@@ -11,15 +19,6 @@
       locals: { image_class: "max-h-96" } %>
   </section>
 
-  <div class="flex flex-col gap-1 py-2">
-    <div class="flex gap-2 py-2">
-      <%= link_to t("gallery.edit"), edit_image_category_path(@image_category),
-        class: "text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg px-3 py-2" %>
-
-      <%= button_to t("gallery.delete"), image_category_path(@image_category), method: :delete,
-        class: "text-white bg-red-700 hover:bg-red-800 font-medium rounded-lg px-3 py-2" %>
-    </div>
-
-    <%= link_to t("gallery.gallery"), image_categories_path, class: "inline-block w-fit border border-gray-200 text-gray-900 bg-white hover:bg-gray-100 hover:text-blue-700 font-medium rounded-lg px-3 py-2" %>
-  </div>
+  <%= link_to @image_category.name, image_category_path(@image_category),
+    class: "inline-block w-fit border border-gray-200 text-gray-900 bg-white hover:bg-gray-100 hover:text-blue-700 font-medium rounded-lg px-3 py-2" %>
 </section>

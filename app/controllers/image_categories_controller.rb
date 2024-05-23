@@ -49,6 +49,10 @@ class ImageCategoriesController < ApplicationController
 
   # DELETE /image_categories/1 or /image_categories/1.json
   def destroy
+    @image_category.images.each do |image|
+      image.destroy!
+    end
+    
     @image_category.destroy!
 
     respond_to do |format|

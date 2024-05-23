@@ -1,0 +1,80 @@
+# Files in the config/locales directory are used for internationalization and
+# are automatically loaded by Rails. If you want to use locales other than
+# English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more about the API, please read the Rails Internationalization guide
+# at https://guides.rubyonrails.org/i18n.html.
+#
+# Be aware that YAML interprets the following case-insensitive strings as
+# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
+# must be quoted to be interpreted as strings. For example:
+#
+#     en:
+#       "yes": yup
+#       enabled: "ON"
+#       welcome: <b>welcome!</b>
+#       hello_to: <b>welcome %{name}!</b>
+#
+#   raw t('welcome')
+#   t('hello_to', name: 'Vasya')
+#
+#
+#
+#
+#
+#
+
+
+ru:
+  helpers:
+    submit:
+      image_category:
+        create: "Создать категорию"
+        update: "Изменить категорию"
+      image:
+        create: "Добавить изображения"
+        update: "Изменить изображение"
+  gallery:
+    image_category:
+      new: "Создать категорию"
+      edit: "Изменить категорию"
+      delete: "Удалить категорию"
+      categories: "Категории"
+      show: "Посмотреть категорию"
+      editing: "Редактирование категории"
+      creating: "Новая категория"
+    image:
+      new: "Добавить изображения"
+      edit: "Изменить изображение"
+      delete: "Удалить изображение"
+      images: "Изображения"
+      show: "Посмотреть изображение"
+      editing: "Редактирование изображения"
+      creating: "Новое изображение"
+  activerecord:
+    models:
+      image_category:
+        one: "Категория"
+        other: "Категории"
+      image:
+        one: "Изображение"
+        other: "Изображения"
+    attributes:
+      image_category:
+        name_ru: "Название на русском"
+        name_lv: "Название на латышском"
+        name_en: "Название на английском"

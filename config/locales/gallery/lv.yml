@@ -1,0 +1,68 @@
+# Files in the config/locales directory are used for internationalization and
+# are automatically loaded by Rails. If you want to use locales other than
+# English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more about the API, please read the Rails Internationalization guide
+# at https://guides.rubyonrails.org/i18n.html.
+#
+# Be aware that YAML interprets the following case-insensitive strings as
+# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
+# must be quoted to be interpreted as strings. For example:
+#
+#     en:
+#       "yes": yup
+#       enabled: "ON"
+
+lv:
+  helpers:
+    submit:
+      image_category:
+        create: "Izveidot kategoriju"
+        update: "Atjaunināt kategoriju"
+      image:
+        create: "Pievienot attēlu"
+        update: "Atjaunināt attēlu"
+  gallery:
+    image_category:
+      new: "Izveidot Kategoriju"
+      edit: "Rediģēt Kategoriju"
+      delete: "Dzēst Kategoriju"
+      categories: "Kategorijas"
+      show: "Apskatīt Kategoriju"
+      editing: "Kategorijas rediģēšana"
+      creating: "Jauna kategorijas"
+    image:
+      new: "Pievienot attēlu"
+      edit: "Rediģēt attēlu"
+      delete: "Dzēst attēlu"
+      images: "Attēli"
+      show: "Apskatīt attēlu"
+      editing: "Attēla rediģēšana"
+      creating: "Jauni attēli"
+  activerecord:
+    models:
+      image_category:
+        one: "Kategorija"
+        other: "Kategorijas"
+      image:
+        one: "Attēls"
+        other: "Attēli"
+    attributes:
+      image_category:
+        name_ru: "Nosaukums krieviski"
+        name_lv: "Nosaukums latviski"
+        name_en: "Nosaukums angliski"
