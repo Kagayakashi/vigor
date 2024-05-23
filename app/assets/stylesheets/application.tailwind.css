@@ -44,4 +44,8 @@
   li a:hover {
     text-decoration: underline;
   }
+
+  p {
+    font-weight: normal;
+  }
 }
