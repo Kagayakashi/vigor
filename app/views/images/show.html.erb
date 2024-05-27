@@ -8,7 +8,7 @@
   </section>
 
   <%= image_tag @image.image, alt: @image.image.filename.to_s,
-    class: "object-scale-down w-fit max-w-full p-2" if @image.image.attached? %>
+    class: "object-scale-down w-fit max-h-[calc(100vh-303px)] p-2" if @image.image.attached? %>
 
   <% if action_name == "show" && @image_category.images.count > 1 %>
     <% prev_image = @image_category.images.where("id < ?", @image.id).last %>
