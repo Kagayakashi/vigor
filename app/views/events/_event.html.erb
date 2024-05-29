@@ -13,11 +13,17 @@
         <strong><%= event.title %></strong>
       </p>
 
+      <% if event.from && event.to %>
       <p>
-        <%= event.from.to_time.strftime('%H:%M') %>
-        &mdash;
-        <%= event.to.to_time.strftime('%H:%M') %>
+        <% if event.from %>
+          <%= event.from.to_time.strftime('%H:%M') %>
+        <% end %>
+        <% if event.to %>
+          &mdash;
+          <%= event.to.to_time.strftime('%H:%M') %>
+        <% end %>
       </p>
+      <% end %>
 
       <p>
         <%= event.content.to_plain_text[0,55] %>

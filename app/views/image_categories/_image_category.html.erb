@@ -1,7 +1,5 @@
 <div id="<%= dom_id image_category %>">
-  <%= link_to image_category.name, image_category_path(image_category),
-    class: "inline-block w-fit border border-gray-200 text-gray-900 bg-white hover:bg-gray-100 hover:text-blue-700 font-medium rounded-lg px-3 py-2" %>
-
-  <%= link_to t("gallery.image_category.edit"), edit_image_category_path(image_category),
-    class: "inline-block w-fit border border-gray-200 text-gray-900 bg-white hover:bg-gray-100 hover:text-blue-700 font-medium rounded-lg px-3 py-2" %>
+  <%= link_to image_category_path(image_category) do %>
+    <h2 class="text-xl"><%= image_category.name %><h2>
+  <% end %>
 </div>
